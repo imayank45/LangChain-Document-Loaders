@@ -1,0 +1,11 @@
+from langchain_community.document_loaders import PyPDFLoader
+
+loader = PyPDFLoader("PLAN.pdf")
+
+docs = loader.load()
+print(type(docs))
+print(len(docs))
+print(docs[0])
+print(type(docs[0]))
+print(docs[0].page_content)
+print(docs[1].metadata)
